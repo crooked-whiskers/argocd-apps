@@ -1,2 +1,2 @@
 # argocd-apps
-argocd apps
+argocd-apps

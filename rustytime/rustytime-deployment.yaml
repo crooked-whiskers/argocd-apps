@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rustytime
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: rustytime
+  template:
+    metadata:
+      labels:
+        app: rustytime
+    spec:
+      containers:
+      - image: crookedwhiskers/rustytime:1.0.0
+        name: rustytime
+        ports:
+        - containerPort: 8080
